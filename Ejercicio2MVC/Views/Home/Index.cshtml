@@ -1,0 +1,132 @@
+﻿@model Data
+    <h1>EJERCICIO 2: INDICAR CUAL ES Max y Min</h1>
+    <div class="row">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="">
+
+                @Html.TextBoxFor(x => x.number1,
+                   new { @class = "form-control", placeholder = "Numero 1",type="number" })
+                @Html.ValidationMessageFor(x => x.number1, null, new { @class = "txt" })
+                <br />
+                @Html.TextBoxFor(x => x.number2,
+                   new { @class = "form-control", placeholder = "Numero 2",type="number" })
+                @Html.ValidationMessageFor(x => x.number2, null, new { @class = "txt" })
+                <br />
+                @Html.TextBoxFor(x => x.number3,
+                       new { @class = "form-control", placeholder = "Numero 3",type="number" })
+                @Html.ValidationMessageFor(x => x.number3, null, new { @class = "txt" })
+                <br />
+                @Html.TextBoxFor(x => x.number4,
+                       new { @class = "form-control", placeholder = "Numero 4",type="number" })
+                @Html.ValidationMessageFor(x => x.number4, null, new { @class = "txt" })
+                <br />
+                @Html.TextBoxFor(x => x.number5,
+                       new { @class = "form-control", placeholder = "Numero 5",type="number" })
+                @Html.ValidationMessageFor(x => x.number5, null, new { @class = "txt" })
+                <br />
+                @Html.TextBoxFor(x => x.number6,
+                       new { @class = "form-control", placeholder = "Numero 6",type="number" })
+                @Html.ValidationMessageFor(x => x.number6, null, new { @class = "txt" })
+                <br />
+                @Html.TextBoxFor(x => x.number7,
+                       new { @class = "form-control", placeholder = "Numero 7",type="number" })
+                @Html.ValidationMessageFor(x => x.number7, null, new { @class = "txt" })
+                <br />
+                @Html.TextBoxFor(x => x.number8,
+                       new { @class = "form-control", placeholder = "Numero 8",type="number" })
+                @Html.ValidationMessageFor(x => x.number8, null, new { @class = "txt" })
+                <br />
+                @Html.TextBoxFor(x => x.number9,
+                       new { @class = "form-control", placeholder = "Numero 9",type="number" })
+                @Html.ValidationMessageFor(x => x.number9, null, new { @class = "txt" })
+                <br />
+                @Html.TextBoxFor(x => x.number10,
+                       new { @class = "form-control", placeholder = "Numero 10",type="number" })
+                @Html.ValidationMessageFor(x => x.number10, null, new { @class = "txt" })
+                <br />
+                <button class="btn btn-primary" type="submit">
+                    Enviar numeros
+                </button>
+            </div>
+
+        }
+        <div style="margin-left:5%">
+            <br />
+            <p>El numero Mayor Es: @ViewData["NumeroMax"]</p>
+            <br />
+            <p>El numero Menor Es: @ViewData["NumeroMin"]</p>
+        </div>
+
+        <div style="margin:5%">
+            <h4>Suma de los digitos</h4>
+            <table style="border:inset" class="table table-striped">
+                
+                <tr style="border:black 3px;">
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma0" + i]</td>
+
+                    }
+                </tr>
+                <tr>
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma1" + i]</td>
+                    }
+                </tr>
+                <tr>
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma2" + i]</td>
+                    }
+                </tr>
+                <tr>
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma3" + i]</td>
+                    }
+                </tr>
+                <tr>
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma4" + i]</td>
+                    }
+                </tr>
+                <tr>
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma5" + i]</td>
+                    }
+                </tr>
+                <tr>
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma6" + i]</td>
+                    }
+                </tr>
+                <tr>
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma7" + i]</td>
+                    }
+                </tr>
+                <tr>
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma8" + i]</td>
+                    }
+                </tr>
+                <tr>
+                    @for (int i = 0; i <= 9; i++)
+                    {
+                        <td style="border:black 2px solid;">@ViewData["Suma9" + i]</td>
+                    }
+                </tr>
+                
+
+            </table>
+        </div>
+
+    </div>
