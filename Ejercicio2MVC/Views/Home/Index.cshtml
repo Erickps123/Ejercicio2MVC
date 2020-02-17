@@ -1,5 +1,5 @@
 ﻿@model Data
-    <h1>EJERCICIO 2: INDICAR CUAL ES Max y Min</h1>
+    <h1>EJERCICIO 2: Indicar cual es el Mayor y Menor</h1>
     <div class="row">
         @using (Html.BeginForm("Index", "Home", FormMethod.Post))
         {
@@ -54,14 +54,14 @@
         }
         <div style="margin-left:5%">
             <br />
-            <p>El numero Mayor Es: @ViewData["NumeroMax"]</p>
+            <p class="text-muted">El numero Mayor Es: @ViewData["NumeroMax"]</p>
             <br />
-            <p>El numero Menor Es: @ViewData["NumeroMin"]</p>
+            <p class="text-muted">El numero Menor Es: @ViewData["NumeroMin"]</p>
         </div>
 
         <div style="margin:5%">
             <h4>Suma de los digitos</h4>
-            <table style="border:inset" class="table table-striped">
+            <table style="border:inset" class="table table-dark">
                 
                 <tr style="border:black 3px;">
                     @for (int i = 0; i <= 9; i++)
